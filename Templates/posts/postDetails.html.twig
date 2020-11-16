@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block title %}Post details{% endblock %}
+{% block body %}
+    <div class="mt-6">
+        <p>{{ post.published | date('d-m-Y')}} : <a href="{{ post.getUrlAlias() }}">source</a></p>
+        <h2>{{ post.titre }}</h2>
+        <p>{{ post.content }}</p>
+    </div>
+    <p><a href="{{ path('app_home') }}">Back</a></p>
+{% endblock body %}
